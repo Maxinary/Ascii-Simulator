@@ -59,7 +59,11 @@ class AsciiDrawer{
   widthOfText(string, size){
     var width = 0;
     for(var count=0;count<string.length;count++){
-      width+=(letters[string.charAt(count)].length+1)*size;
+      if(letters[string.charAt(count)]){
+        width+=(letters[string.charAt(count)].length+1)*size;
+      }else{
+        width+=size*3;
+      }
     }
     return width;
   }
