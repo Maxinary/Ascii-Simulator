@@ -2,12 +2,9 @@ var c = document.getElementById("ascii");
 c.width = document.body.clientWidth;
 c.height = document.body.clientHeight;
 var a = new AsciiDrawer(c,20);
-var i=0;
-/*for(var key in letters){
-  a.character = key;
-  a.writeLetter(key,(i%13)*6,Math.floor(i/13)*7,1);
-  console.log(key);
-  i++;
-}*/
-a.writeText("TEST TEXT",0,0,1);
+console.log(a.fillStyle);
+a.fillStyle.color = "#FFFFFF";
+a.writeText("TEST",Math.floor(a.board.length/2-a.widthOfText("TEST",1)/2),0,1);
+a.fillStyle.color = "#00FF00";
+a.writeText("STRING",Math.floor(a.board.length/2-a.widthOfText("STRING",1)/2),6,1);
 a.draw();

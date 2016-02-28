@@ -2,7 +2,7 @@
 class AsciiDrawer{
   constructor(canvas, charsize){
     this.character = " ";
-    this.letterColor = "#00FF00";
+    this.fillStyle = {color:"#00FF00", character:" "};
     this.bgColor = "#000000";
     this.charsize = charsize;
     this.canvas = canvas;
@@ -16,7 +16,7 @@ class AsciiDrawer{
     for(var i=0;i<canvas.width/charsize*4/3;i++){//TODO Reverse the dimensions for speed
       this.board.push([]);
       for(var j=0;j<canvas.height/charsize*4/3;j++){
-        this.board[i].push(this.character);
+        this.board[i].push(this.fillStyle);
       }
     }
   }
@@ -25,35 +25,43 @@ class AsciiDrawer{
     for(var i=x0;i<x1;i++){
       for(var j=y0;j<y1;j++){
         if(i<this.board.length && i>=0 && j>=0 && j<this.board[0].length){
-          this.board[i][j] = this.character;
+          this.board[i][j] = this.fillStyle;
         }
       }
     }
   }
   
   writeLetter(letter,x,y,size){
-    this.character = letter;
     for(var i=0;i<letters[letter].length*size;i++){
       for(var j=0;j<letters[letter][0].length*size;j++){
         if(letters[letter][Math.floor(i/size)][Math.floor(j/size)]
           && x+i>=0 && x+i<this.board.length//check for x overflow
           && y+j>=0 && y+j<this.board[0].length){
-          this.board[x+i][y+j] = this.character;
+          this.board[x+i][y+j] = {character:letter,color:this.fillStyle.color};
         }
       }
     }
   }
+  
   writeText(text, x, y, size){
     var letter;
     for(var count=0, width = 0;count<text.length;count++){
       letter = text.charAt(count);
       if(letters[letter]!==undefined){
         this.writeLetter(letter, x+width, y, size);
-        width+=(letters[letter].length+1)*size
+        width+=(letters[letter].length+1)*size;
       }else{
         width+=size*3;
       }
     }
+  }
+  
+  widthOfText(string, size){
+    var width = 0;
+    for(var count=0;count<string.length;count++){
+      width+=(letters[string.charAt(count)].length+1)*size;
+    }
+    return width;
   }
   
   draw(){
@@ -62,8 +70,9 @@ class AsciiDrawer{
     this.context.fillStyle = this.letterColor;
     for(var i=0;i<this.board.length;i++){
       for(var j=0;j<this.board[0].length;j++){
-        if(this.board[i][j]!=" "){
-          this.context.fillText(this.board[i][j], i*this.charsize*3/4, (j+1)*this.charsize*3/4);
+        if(this.board[i][j].character!=" "){
+          this.context.fillStyle = this.board[i][j].color;
+          this.context.fillText(this.board[i][j].character, i*this.charsize*3/4, (j+1)*this.charsize*3/4);
         }
       }
     }
