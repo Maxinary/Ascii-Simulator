@@ -2,10 +2,11 @@ var f = false;
 var t = true;
 var letters = {
   "A" : [ 
-      [t,t,t,t,t,f],
+      [f,f,f,t,t,f],
+      [f,t,t,f,f,f],
       [t,f,t,f,f,f],
-      [t,f,t,f,f,f],
-      [t,t,t,t,t,f],
+      [f,t,t,f,f,f],
+      [f,f,f,t,t,f]
       ],
   "B" : [ 
       [t,t,t,t,t,f],
@@ -64,9 +65,9 @@ var letters = {
       ],
   "K" : [
       [t,t,t,t,t,f],
-      [f,f,t,f,f,f],
-      [t,t,t,f,f,f],
-      [f,f,t,t,t,f]
+      [f,t,t,f,f,f],
+      [t,f,f,t,f,f],
+      [f,f,f,f,t,f]
       ],
   "L" : [
       [t,t,t,t,t,f],
@@ -110,8 +111,8 @@ var letters = {
   "R" : [
       [t,t,t,t,t,f],
       [t,f,t,f,f,f],
-      [t,t,t,f,f,f],
-      [f,f,t,t,t,f]
+      [t,f,t,f,f,f],
+      [f,t,f,t,t,f]
       ],
   "S" : [
       [f,t,f,f,t,f],
