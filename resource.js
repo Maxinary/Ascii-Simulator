@@ -44,12 +44,14 @@ class AsciiDrawer{
     }
   }
   writeText(text, x, y, size){
-    var  letter;
-    for(var count=0;count<text.length;count++){
+    var letter;
+    for(var count=0, width = 0;count<text.length;count++){
       letter = text.charAt(count);
-      console.log(letter);
       if(letters[letter]!==undefined){
-        this.writeLetter(letter, x+count*6,y, size);
+        this.writeLetter(letter, x+width, y, size);
+        width+=(letters[letter].length+1)*size
+      }else{
+        width+=size*3;
       }
     }
   }

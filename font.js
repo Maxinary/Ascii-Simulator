@@ -6,7 +6,6 @@ var letters = {
       [t,f,t,f,f,f],
       [t,f,t,f,f,f],
       [t,t,t,t,t,f],
-      [f,f,f,f,f,f]
       ],
   "B" : [ 
       [t,t,t,t,t,f],
@@ -19,50 +18,42 @@ var letters = {
       [t,t,t,t,t,f],
       [t,f,f,f,t,f],
       [t,f,f,f,t,f],
-      [t,f,f,f,t,f],
-      [f,f,f,f,f,f]
+      [t,f,f,f,t,f]
       ],
   "D" : [ 
       [t,t,t,t,t,f],
       [t,f,f,f,t,f],
       [t,f,f,f,t,f],
-      [f,t,t,t,f,f],
-      [f,f,f,f,f,f]
+      [f,t,t,t,f,f]
       ],
   "E" : [ 
       [t,t,t,t,t,f],
       [t,f,t,f,t,f],
       [t,f,t,f,t,f],
-      [t,f,t,f,t,f],
-      [f,f,f,f,f,f]
+      [t,f,t,f,t,f]
       ],
   "F" : [ 
       [t,t,t,t,t,f],
       [t,f,t,f,f,f],
       [t,f,t,f,f,f],
-      [t,f,f,f,f,f],
-      [f,f,f,f,f,f]
+      [t,f,f,f,f,f]
       ],
   "G" : [
       [t,t,t,t,t,f],
       [t,f,f,f,t,f],
       [t,f,t,f,t,f],
-      [t,f,t,t,t,f],
-      [f,f,f,f,f,f]
+      [t,f,t,t,t,f]
       ],
   "H" : [
       [t,t,t,t,t,f],
       [f,f,t,f,f,f],
       [f,f,t,f,f,f],
-      [t,t,t,t,t,f],
-      [f,f,f,f,f,f]
+      [t,t,t,t,t,f]
       ],
   "I" : [
-      [f,f,f,f,f,f],
       [t,f,f,f,t,f],
       [t,t,t,t,t,f],
-      [t,f,f,f,t,f],
-      [f,f,f,f,f,f]
+      [t,f,f,f,t,f]
       ],
   "J" : [
       [f,f,f,f,f,f],
@@ -75,15 +66,13 @@ var letters = {
       [t,t,t,t,t,f],
       [f,f,t,f,f,f],
       [t,t,t,f,f,f],
-      [f,f,t,t,t,f],
-      [f,f,f,f,f,f]
+      [f,f,t,t,t,f]
       ],
   "L" : [
       [t,t,t,t,t,f],
       [f,f,f,f,t,f],
       [f,f,f,f,t,f],
-      [f,f,f,f,t,f],
-      [f,f,f,f,f,f]
+      [f,f,f,f,t,f]
       ],
   "M" : [
       [t,t,t,t,t,f],
@@ -103,15 +92,13 @@ var letters = {
       [t,t,t,t,t,f],
       [t,f,f,f,t,f],
       [t,f,f,f,t,f],
-      [t,t,t,t,t,f],
-      [f,f,f,f,f,f]
+      [t,t,t,t,t,f]
       ],
   "P" : [
       [t,t,t,t,t,f],
       [t,f,t,f,f,f],
       [t,f,t,f,f,f],
-      [t,t,t,f,f,f],
-      [f,f,f,f,f,f]
+      [t,t,t,f,f,f]
       ],
   "Q" : [
       [t,t,t,t,t,f],
@@ -124,29 +111,24 @@ var letters = {
       [t,t,t,t,t,f],
       [t,f,t,f,f,f],
       [t,t,t,f,f,f],
-      [f,f,t,t,t,f],
-      [f,f,f,f,f,f]
+      [f,f,t,t,t,f]
       ],
   "S" : [
       [f,t,f,f,t,f],
       [t,f,t,f,t,f],
       [t,f,t,f,t,f],
-      [t,f,f,t,f,f],
-      [f,f,f,f,f,f]
+      [t,f,f,t,f,f]
       ],
   "T" : [
-      [f,f,f,f,f,f],
       [t,f,f,f,f,f],
       [t,t,t,t,t,f],
-      [t,f,f,f,f,f],
-      [f,f,f,f,f,f]
+      [t,f,f,f,f,f]
       ],
   "U" : [
       [t,t,t,t,t,f],
       [f,f,f,f,t,f],
       [f,f,f,f,t,f],
-      [t,t,t,t,t,f],
-      [f,f,f,f,f,f]
+      [t,t,t,t,t,f]
       ],
   "V" : [
       [t,t,t,f,f,f],
